@@ -1,102 +1,99 @@
-
 # SQL Project: Student Course Management
 
 ## Project Overview
 
-This project involves creating a database to manage student course information. The database will include tables for students, courses, enrollments, and instructors. This project is designed to help you learn and practice SQL through various tasks including database setup, table creation, data insertion, and query formulation.
+This project involves creating a database to manage student course information. You’ll be working with tables for students, courses, enrollments, and instructors. The aim is to practice SQL queries covering various aspects like selection, filtering, aggregation, joins, and subqueries.
 
-## Project Requirements
+## What You Need to Do
 
-### Database Setup
+### 1. Database Setup
 
-1. **Create a Database**
+- **Create a Database**: Set up a database named `StudentCourseManagement`.
 
-   Create a database named `StudentCourseManagement`.
+### 2. Table Creation
 
-### Table Creation
+Create the following tables:
 
-Create the following tables with appropriate data types and constraints:
+- **Students**
+  - `student_id` (Primary Key, INT, AUTO_INCREMENT)
+  - `first_name` (VARCHAR)
+  - `last_name` (VARCHAR)
+  - `email` (VARCHAR)
+  - `date_of_birth` (DATE)
 
-1. **Students**
-   - `student_id` (Primary Key, INT, AUTO_INCREMENT)
-   - `first_name` (VARCHAR)
-   - `last_name` (VARCHAR)
-   - `email` (VARCHAR)
-   - `date_of_birth` (DATE)
+- **Courses**
+  - `course_id` (Primary Key, INT, AUTO_INCREMENT)
+  - `course_name` (VARCHAR)
+  - `course_description` (TEXT)
 
-2. **Courses**
-   - `course_id` (Primary Key, INT, AUTO_INCREMENT)
-   - `course_name` (VARCHAR)
-   - `course_description` (TEXT)
+- **Instructors**
+  - `instructor_id` (Primary Key, INT, AUTO_INCREMENT)
+  - `first_name` (VARCHAR)
+  - `last_name` (VARCHAR)
+  - `email` (VARCHAR)
 
-3. **Instructors**
-   - `instructor_id` (Primary Key, INT, AUTO_INCREMENT)
-   - `first_name` (VARCHAR)
-   - `last_name` (VARCHAR)
-   - `email` (VARCHAR)
+- **Enrollments**
+  - `enrollment_id` (Primary Key, INT, AUTO_INCREMENT)
+  - `student_id` (Foreign Key, INT)
+  - `course_id` (Foreign Key, INT)
+  - `enrollment_date` (DATE)
 
-4. **Enrollments**
-   - `enrollment_id` (Primary Key, INT, AUTO_INCREMENT)
-   - `student_id` (Foreign Key, INT)
-   - `course_id` (Foreign Key, INT)
-   - `enrollment_date` (DATE)
+### 3. Insert Sample Data
 
-### Insert Sample Data
+- Add at least 10 students.
+- Insert 5 courses.
+- Include 3 instructors.
+- Create 15 enrollments connecting students with courses.
 
-Insert at least:
-- 10 students
-- 5 courses
-- 3 instructors
-- 15 enrollments
+### 4. Basic Queries
 
-### Basic Queries
+Run queries to:
+- Select all students.
+- Select all courses.
+- Select all enrollments along with student names and course names.
 
-Perform basic queries to:
-- Select all students
-- Select all courses
-- Select all enrollments with student names and course names
+### 5. Advanced Queries
 
-### Advanced Queries
+Execute advanced queries to:
+- Find students enrolled in a specific course.
+- Identify courses with more than 5 students.
+- Update a student’s email address.
+- Delete a course if no students are enrolled in it.
+- Calculate the average age of students.
+- Find the course with the most enrollments.
+- List courses and the number of students enrolled in each.
 
-Perform advanced queries to:
-- Select students who enrolled in a specific course
-- Select courses with more than 5 students
-- Update a student's email
-- Delete a course that no students are enrolled in
-- Calculate the average age of students
-- Find the course with the maximum enrollments
-- List courses along with the number of students enrolled
+### 6. Join Queries
 
-### Join Queries
+Perform joins to:
+- Select all students and their enrolled courses.
+- List all instructors and their courses.
+- Find students who are not enrolled in any course.
 
-Perform join queries to:
-- Select all students with their enrolled courses
-- List all instructors and their courses
-- Find students who are not enrolled in any course
-
-### Subqueries and Set Operations
+### 7. Subqueries and Set Operations
 
 Use subqueries and set operations to:
-- Select students enrolled in more than one course
-- Find courses taught by a specific instructor
-- Select the top 3 students with the most enrollments
-- Use UNION to combine results of two different SELECT queries
+- Select students enrolled in more than one course.
+- Find courses taught by a specific instructor.
+- Select the top 3 students with the most enrollments.
+- Combine results from different queries using UNION.
 
-### Functions and Stored Procedures
+### 8. Functions and Stored Procedures
 
 Create and use:
-- A stored procedure to add a new student
-- A function to calculate the age of a student based on their date of birth
+- A stored procedure to add a new student.
+- A function to calculate a student’s age based on their date of birth.
 
-### Aggregate Functions and Grouping
+### 9. Aggregate Functions and Grouping
 
 Calculate and group data to:
-- Calculate the total number of students
-- Calculate the average, minimum, and maximum number of enrollments per course
+- Find the total number of students.
+- Calculate the average, minimum, and maximum number of enrollments per course.
 
-### Additional Tasks
+### 10. Additional Tasks
 
-Perform additional tasks to:
-- Use CASE to categorize students based on their age
-- Use EXISTS to find courses with at least one enrolled student
+Complete additional tasks to:
+- Use CASE statements to categorize students by age.
+- Use EXISTS to find courses with at least one enrolled student.
+
 
